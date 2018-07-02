@@ -1,0 +1,25 @@
+{
+  "name": "sql-q",
+  "version": "2.2.0",
+  "description": "mssql query constructor generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "css": "github-markdown-css css.css"
+  },
+  "keywords": [
+    "mssql",
+    "db develop without query"
+  ],
+  "author": "yoshiyuki mizogami",
+  "license": "MIT",
+  "devDependencies": {
+    "expect": "^1.20.2",
+    "mocha": "^5.2.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.10",
+    "mssql": "^4.1.0",
+    "tedious": "^2.6.1"
+  }
+}
