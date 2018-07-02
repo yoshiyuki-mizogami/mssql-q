@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<script src="../node_modules/lodash/lodash.js"></script>
+<script src="../node_modules/moment/moment.js"></script>
+<script src="../dist/jscript-mssql.js"></script>
+<body>
+  <script>
+  Sql.open({
+    server:'10.26.27.236,1433',
+    database:'test',
+    user:'dev',
+    password:'sys_dev'
+  });
+  var rs = new Sql('sample').field('*').select();
+  new Sql('sample').field('sample').values('OK').insert();
+  var r = new Sql('sample').field('*').selectOne();
+  console.log(JSON.stringify(r));
+  </script>
+</body>
+</html>
