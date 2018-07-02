@@ -1,5 +1,5 @@
 {
-  "name": "sql-q",
+  "name": "mssql-q",
   "version": "2.2.0",
   "description": "mssql query constructor generator",
   "main": "index.js",
