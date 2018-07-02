@@ -1,4 +1,4 @@
-# sql-q
+# mssql-q
 
 > node mssql クエリ生成モジュール
 
@@ -16,14 +16,14 @@
 `IMPORTANT` Node7.0.0 <= でしかテストしてません
 ## install
 ```sh
-  npm install -S git+http://10.26.196.242:4850/gitbucket/git/ceng-dev/sql-q.git
+  npm install -S git+https://github.com/yoshiyuki-mizogami/mssql-q.git
 ```
 
 グループのGitBucketURLにgit+をつけることでインストールできます。
 
 ### Basic Usage
 ```javascript
-  let mssqlQ = require('sql-q')
+  let mssqlQ = require('mssql-q')
   let con = new mssqlQ({
     server:'192.168.1.1',
     user:'login_user',
