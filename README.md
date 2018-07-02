@@ -19,8 +19,6 @@
   npm install -S git+https://github.com/yoshiyuki-mizogami/mssql-q.git
 ```
 
-グループのGitBucketURLにgit+をつけることでインストールできます。
-
 ### Basic Usage
 ```javascript
   let mssqlQ = require('mssql-q')
