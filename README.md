@@ -31,16 +31,11 @@
       useUTC:false
     }
   })
-  con.connect()
-  .then(()=>{
-    con.q('sample_table')
+  await con.connect()
+  const records = await con.q('sample_table')
     .fields('filed_a', 'field_b')
     .select()
-    .then(rs=>{
-      //rs => response by  "SELECT field_a, field_b FROM sample_table"
-      console.log(rs)
-    })
-  })
+  console.log(records)
 ```
 
 ## Connection
@@ -204,6 +199,18 @@ update,insert時に有効。selectでは単に無視される
   // => INSERT INTO some_table(acol) VALUES('A Value') 
 
 ```
+### `Query.join(joinType, joinTable, condition)`
+  * `returns` this
+
+join句を構成
+```javascript
+con.query('table_a')
+  .join('inner', 'table_b', 'table_a.id = b.parent_id', 'b')
+  .select()
+  //=> SELECT * from table_a table_a inner JOIN table_b b ON table_a.id = b.parent_id
+
+```
+
 
 ### `Query.clearValues(...values)`
 現在のValuesをクリアして値を定義
